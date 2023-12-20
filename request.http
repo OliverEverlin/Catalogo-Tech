@@ -1,0 +1,29 @@
+###
+POST http://localhost:9000/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Nikola Tesla",
+    "age": 83,
+    "password": "simeacuerdo"
+}
+
+
+###
+GET http://localhost:9000/api/users HTTP/1.1
+
+###
+GET http://localhost:9000/api/users/6582761ac5d7cecff6cc5557 HTTP/1.1
+
+###
+PUT http://localhost:9000/api/users/6582761ac5d7cecff6cc5557 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Nikola Tesla",
+    "age": 81,
+    "password": "simeacuerdo"
+}
+
+###
+DELETE http://localhost:9000/api/users/6582761ac5d7cecff6cc5557 HTTP/1.1
