@@ -1,0 +1,112 @@
+### works
+GET http://localhost:8080/products
+
+### need token
+
+GET http://localhost:8080/users
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODUyNzgzZDVmNDU2NjlmNjdkZGRkYSIsImlhdCI6MTcwMzIyOTI0OCwiZXhwIjoxNzAzMzE1NjQ4fQ.X9sXuwhBsz2mD_nE0ywZtdgGmWdboBGSfi-aFQh9_LM
+
+###
+
+GET http://localhost:8080/cart
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODUyNzgzZDVmNDU2NjlmNjdkZGRkYSIsImlhdCI6MTcwMzIyOTI0OCwiZXhwIjoxNzAzMzE1NjQ4fQ.X9sXuwhBsz2mD_nE0ywZtdgGmWdboBGSfi-aFQh9_LM
+
+###
+
+POST http://localhost:8080/auth/signin
+Content-Type: application/json
+
+{
+    "name": "liverlin",
+    "password": "bebeloper123"
+}
+
+###
+POST http://localhost:8080/auth/signup
+Content-Type: application/json
+
+{
+    "name": "Mugammad Breda",
+    "email": "bredrawings@gmail.com",
+    "password": "password"
+}
+
+### add product
+POST http://localhost:8080/products
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODUyNzgzZDVmNDU2NjlmNjdkZGRkYSIsImlhdCI6MTcwMzIyOTI0OCwiZXhwIjoxNzAzMzE1NjQ4fQ.X9sXuwhBsz2mD_nE0ywZtdgGmWdboBGSfi-aFQh9_LM
+
+{
+    "name": "lenovo-ideapad",
+    "description": "amazing",
+    "img": "ideapad",
+    "price": 5,
+    "qty": 20
+}
+
+### add other product :v
+POST http://localhost:8080/products
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODUyNzgzZDVmNDU2NjlmNjdkZGRkYSIsImlhdCI6MTcwMzIyOTI0OCwiZXhwIjoxNzAzMzE1NjQ4fQ.X9sXuwhBsz2mD_nE0ywZtdgGmWdboBGSfi-aFQh9_LM
+
+{
+    "name": "lenovo-thinkpad",
+    "description": "pa la mina :v",
+    "img": "thinkpad",
+    "price": 7,
+    "qty": 15
+}
+
+### elimina producto
+DELETE http://localhost:8080/products/6585382eeeab98258e0d075d
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODUyNzgzZDVmNDU2NjlmNjdkZGRkYSIsImlhdCI6MTcwMzIyOTI0OCwiZXhwIjoxNzAzMzE1NjQ4fQ.X9sXuwhBsz2mD_nE0ywZtdgGmWdboBGSfi-aFQh9_LM
+
+###
+DELETE http://localhost:8080/cart
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODUyNzgzZDVmNDU2NjlmNjdkZGRkYSIsImlhdCI6MTcwMzIyOTI0OCwiZXhwIjoxNzAzMzE1NjQ4fQ.X9sXuwhBsz2mD_nE0ywZtdgGmWdboBGSfi-aFQh9_LM
+
+### edita producto
+PATCH  http://localhost:8080/products/6585385ceeab98258e0d0767
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODUyNzgzZDVmNDU2NjlmNjdkZGRkYSIsImlhdCI6MTcwMzIyOTI0OCwiZXhwIjoxNzAzMzE1NjQ4fQ.X9sXuwhBsz2mD_nE0ywZtdgGmWdboBGSfi-aFQh9_LM
+
+{
+    "qty": 200
+}
+
+###
+POST http://localhost:8080/cart/6229d82eeda4cf8db56f1392
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODUyNzgzZDVmNDU2NjlmNjdkZGRkYSIsImlhdCI6MTcwMzIyOTI0OCwiZXhwIjoxNzAzMzE1NjQ4fQ.X9sXuwhBsz2mD_nE0ywZtdgGmWdboBGSfi-aFQh9_LM
+
+{
+    "qty": 20
+}
+
+###
+PUT http://localhost:8080/cart/6229d82eeda4cf8db56f1392
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODUyNzgzZDVmNDU2NjlmNjdkZGRkYSIsImlhdCI6MTcwMzIyOTI0OCwiZXhwIjoxNzAzMzE1NjQ4fQ.X9sXuwhBsz2mD_nE0ywZtdgGmWdboBGSfi-aFQh9_LM
+
+{
+    "qty": 5
+}
+
+###
+PATCH http://localhost:8080/cart/6229d82eeda4cf8db56f1392
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODUyNzgzZDVmNDU2NjlmNjdkZGRkYSIsImlhdCI6MTcwMzIyOTI0OCwiZXhwIjoxNzAzMzE1NjQ4fQ.X9sXuwhBsz2mD_nE0ywZtdgGmWdboBGSfi-aFQh9_LM
+
+###
+DELETE http://localhost:8080/user
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODUyNzgzZDVmNDU2NjlmNjdkZGRkYSIsImlhdCI6MTcwMzIyOTI0OCwiZXhwIjoxNzAzMzE1NjQ4fQ.X9sXuwhBsz2mD_nE0ywZtdgGmWdboBGSfi-aFQh9_LM
+
+###
+PATCH http://localhost:8080/user
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODUyNzgzZDVmNDU2NjlmNjdkZGRkYSIsImlhdCI6MTcwMzIyOTI0OCwiZXhwIjoxNzAzMzE1NjQ4fQ.X9sXuwhBsz2mD_nE0ywZtdgGmWdboBGSfi-aFQh9_LM
+
+{
+    "name": "Mugammad Breda"
+}
