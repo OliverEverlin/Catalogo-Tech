@@ -1,18 +1,18 @@
-### works
+### muestra todos los productos
 GET http://localhost:8080/products
 
-### need token
 
+### need token -> el token se muestra cuando te logueas
 GET http://localhost:8080/users
 x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODUyNzgzZDVmNDU2NjlmNjdkZGRkYSIsImlhdCI6MTcwMzIyOTI0OCwiZXhwIjoxNzAzMzE1NjQ4fQ.X9sXuwhBsz2mD_nE0ywZtdgGmWdboBGSfi-aFQh9_LM
 
-###
 
+### muestra los carritos de compra
 GET http://localhost:8080/cart
 x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODUyNzgzZDVmNDU2NjlmNjdkZGRkYSIsImlhdCI6MTcwMzIyOTI0OCwiZXhwIjoxNzAzMzE1NjQ4fQ.X9sXuwhBsz2mD_nE0ywZtdgGmWdboBGSfi-aFQh9_LM
 
-###
 
+###logueo
 POST http://localhost:8080/auth/signin
 Content-Type: application/json
 
@@ -21,15 +21,27 @@ Content-Type: application/json
     "password": "bebeloper123"
 }
 
-###
+### crear cuenta
 POST http://localhost:8080/auth/signup
 Content-Type: application/json
 
 {
-    "name": "Mugammad Breda",
-    "email": "bredrawings@gmail.com",
+    "name": "Elon Mosk",
+    "email": "x@twiter.com",
     "password": "password"
 }
+
+### crear usuario -> lo mismo xd
+POST http://localhost:8080/auth/signup
+Content-Type: application/json
+
+{
+    "name": "dfsbdf dfvsfd",
+    "email": "fdsgdfsg@gmail.com",
+    "password": "password",
+    "role":"1"
+}
+
 
 ### add product
 POST http://localhost:8080/products
@@ -37,14 +49,15 @@ Content-Type: application/json
 x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODUyNzgzZDVmNDU2NjlmNjdkZGRkYSIsImlhdCI6MTcwMzIyOTI0OCwiZXhwIjoxNzAzMzE1NjQ4fQ.X9sXuwhBsz2mD_nE0ywZtdgGmWdboBGSfi-aFQh9_LM
 
 {
-    "name": "lenovo-ideapad",
-    "description": "amazing",
-    "img": "ideapad",
-    "price": 5,
-    "qty": 20
+    "name": "lenovo-gbdfg",
+    "description": "pal mainchah",
+    "img": "legion",
+    "price": 7,
+    "qty": 50
 }
 
-### add other product :v
+
+### add other product :v -> think pad
 POST http://localhost:8080/products
 Content-Type: application/json
 x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODUyNzgzZDVmNDU2NjlmNjdkZGRkYSIsImlhdCI6MTcwMzIyOTI0OCwiZXhwIjoxNzAzMzE1NjQ4fQ.X9sXuwhBsz2mD_nE0ywZtdgGmWdboBGSfi-aFQh9_LM
@@ -58,23 +71,26 @@ x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODUyNzgzZDVmNDU
 }
 
 ### elimina producto
-DELETE http://localhost:8080/products/6585382eeeab98258e0d075d
+DELETE http://localhost:8080/products/6585385ceeab98258e0d0767
 Content-Type: application/json
 x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODUyNzgzZDVmNDU2NjlmNjdkZGRkYSIsImlhdCI6MTcwMzIyOTI0OCwiZXhwIjoxNzAzMzE1NjQ4fQ.X9sXuwhBsz2mD_nE0ywZtdgGmWdboBGSfi-aFQh9_LM
 
-###
+
+### elimnia carrito
 DELETE http://localhost:8080/cart
 Content-Type: application/json
 x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODUyNzgzZDVmNDU2NjlmNjdkZGRkYSIsImlhdCI6MTcwMzIyOTI0OCwiZXhwIjoxNzAzMzE1NjQ4fQ.X9sXuwhBsz2mD_nE0ywZtdgGmWdboBGSfi-aFQh9_LM
 
-### edita producto
-PATCH  http://localhost:8080/products/6585385ceeab98258e0d0767
+
+### edita producto -> ideapad
+PATCH  http://localhost:8080/products/658537e8eeab98258e0d0758
 Content-Type: application/json
 x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODUyNzgzZDVmNDU2NjlmNjdkZGRkYSIsImlhdCI6MTcwMzIyOTI0OCwiZXhwIjoxNzAzMzE1NjQ4fQ.X9sXuwhBsz2mD_nE0ywZtdgGmWdboBGSfi-aFQh9_LM
 
 {
     "qty": 200
 }
+
 
 ###
 POST http://localhost:8080/cart/6229d82eeda4cf8db56f1392
@@ -85,28 +101,32 @@ x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODUyNzgzZDVmNDU
     "qty": 20
 }
 
+
 ###
 PUT http://localhost:8080/cart/6229d82eeda4cf8db56f1392
 Content-Type: application/json
-x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODUyNzgzZDVmNDU2NjlmNjdkZGRkYSIsImlhdCI6MTcwMzIyOTI0OCwiZXhwIjoxNzAzMzE1NjQ4fQ.X9sXuwhBsz2mD_nE0ywZtdgGmWdboBGSfi-aFQh9_LM
+x-access-token: fdkjgbdfs.eyJpZzZDVmNDU2NjlmNjdkZGRkYSIsImlhdCI6MTcwMzIyOTI0OCwiZXhwIjoxNzAzMzE1NjQ4fQ.X9sXuwhBsz2mD_nE0ywZtdgGmWdboBGSfi-aFQh9_LM
 
 {
     "qty": 5
 }
 
-###
+
+### update carrito
 PATCH http://localhost:8080/cart/6229d82eeda4cf8db56f1392
 x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODUyNzgzZDVmNDU2NjlmNjdkZGRkYSIsImlhdCI6MTcwMzIyOTI0OCwiZXhwIjoxNzAzMzE1NjQ4fQ.X9sXuwhBsz2mD_nE0ywZtdgGmWdboBGSfi-aFQh9_LM
 
-###
+
+### 
 DELETE http://localhost:8080/user
 x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODUyNzgzZDVmNDU2NjlmNjdkZGRkYSIsImlhdCI6MTcwMzIyOTI0OCwiZXhwIjoxNzAzMzE1NjQ4fQ.X9sXuwhBsz2mD_nE0ywZtdgGmWdboBGSfi-aFQh9_LM
 
-###
+
+### update name of user
 PATCH http://localhost:8080/user
 Content-Type: application/json
 x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODUyNzgzZDVmNDU2NjlmNjdkZGRkYSIsImlhdCI6MTcwMzIyOTI0OCwiZXhwIjoxNzAzMzE1NjQ4fQ.X9sXuwhBsz2mD_nE0ywZtdgGmWdboBGSfi-aFQh9_LM
 
 {
-    "name": "Mugammad Breda"
+    "name": "Pocoyo 1234"
 }

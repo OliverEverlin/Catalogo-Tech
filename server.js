@@ -143,6 +143,12 @@ require('./app/routes/user')(app);
 require('./app/routes/product')(app);
 require('./app/routes/cart')(app);
 
+// app.use((req, res, next) => {
+//     res.status(404).json({
+//         message: "Página no encontrada"
+//     });
+// });
+
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
 
